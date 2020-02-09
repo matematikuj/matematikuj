@@ -1,0 +1,41 @@
+<h2>{{podtema}}</h2>
+<dl>
+{% for kapitola in kapitoly %}
+<dt><a href="#{{kapitola.kapitola}}">{{kapitola.kapitola}}</a></dt>
+{% endfor %}
+<dl>
+
+{% for kapitola in kapitoly %}
+    <h3 id="{{kapitola.kapitola}}"">{{kapitola.kapitola}}</h3>
+    {% for priklad in priklady %}
+
+        {% if kapitola == priklad.tema%}
+
+            {% if priklad.ukaz_reseni %}
+            <div id="{{priklad.ukaz_reseni}}" class="ukazuj">
+            <div class="zadani_vyrazne">
+            <p> <strong> Příklad: {{priklad.ident}} </strong> {{ priklad.zadani }} 
+            <p><em>Řešení: </em> {{ priklad.reseni }} </p>
+            </div>
+            </div>
+            {% else %}
+            <div id="{{priklad.ukaz_reseni}}">
+            <div class="zadani">
+            <p> <strong> Příklad: {{priklad.ident}} </strong>Zadání: {{ priklad.zadani }} 
+            <form action='.' method='POST'>
+                    {% csrf_token %}
+            <input class="reseni_button" type="submit" name="{{priklad.ident}}" value="Řešení">
+            </form>
+            </p>
+            </div>
+            </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+
+<script>
+    var elmnt = document.getElementById("True");
+    elmnt.scrollIntoView();
+</script>

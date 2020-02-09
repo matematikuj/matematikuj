@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="cs">
+ 
+<head>
+ <title>Matematikuj</title>
+ <meta charset="utf-8">
+ <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+<script type="text/javascript">
+LatexIT.add('p',true);
+</script> <!-- Napsat codecogs do footeru-->
+ {% load staticfiles %}
+ <link rel="stylesheet" href={% static 'global_static/base_style.css' %}>
+ <link rel="stylesheet" href={% static 'matematikuj_style.css' %}>
+
+</head>
+<body>
+<header>
+
+</header>
+<nav>
+    <div class="home"><a href="/"><img src={% static 'logo.svg' %}></div>
+    <dl class="menu">
+    {% for blok in bloky %}
+        <dd class="menu-button"> <a class="button" href="{{blok.odkaz}}/">{{blok.nazev}}</a></dd>
+    {% endfor %}
+
+    </dl>
+</nav>
+<article>
+ <div id="uvod">
+ <p>Web je momentálně v přípravě! $\int x^2 + 2 dx$</p>
+ 
+ </div>
+</article>
+<footer>
+
+</footer>
+</body>
+</html>

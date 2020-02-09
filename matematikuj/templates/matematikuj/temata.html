@@ -1,0 +1,11 @@
+Sbírka úloh pro základní a střední školu. Ročníky na základní škole jsou orientační.
+<h1>Základní škola</h1>
+{% for tema in temata_ZS %}
+    <div class="inline">
+    <a href="{{tema}}/" class="cell">{{tema}}</a></div>
+{% endfor %}
+<h1>Střední škola</h1>
+{% for tema in temata_SS %}
+                <div class="inline">
+                  <a href="{{tema}}/" class="cell">{{tema}}</a></div>
+{% endfor %}

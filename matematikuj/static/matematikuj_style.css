@@ -1,0 +1,50 @@
+nav { 
+    background-color: #000080;
+    }
+    
+    div.inline {
+        display: inline-grid;
+        text-align: center;
+    }
+    
+    a.cell,a.cell:hover {
+        text-align: center;
+        background-color: lightgray;
+        width: 12em;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        border: 1px black solid;
+        color: black;
+        text-decoration: none;
+        font-variant: small-caps; 
+        border-radius: 0.5em;
+    }
+    a.cell:hover { 
+        text-decoration: none;
+        background-color: #000080;;
+        color: white;
+        background-image: url(images/background.png);
+        font-weight: bold;
+        font-size: 12pt;
+        border-radius: 0.5em;
+    }
+    .zadani, .zadani_vyrazne {
+        padding:0.2em;
+    }
+
+    .zadani_vyrazne{
+        border-radius: 0.5em;
+        border: 1px grey solid;
+        background-color: whitesmoke;
+    }
+    .ukazuj{
+        margin-top: 1em;
+    }
+    .reseni{
+        visibility: hidden;
+    }
+
+    .reseni_button {
+        padding: 0.5em;
+    }
+    

@@ -1,0 +1,9 @@
+{% load staticfiles %}
+<div class="home"><a href="/"><img src={% static 'logo.svg' %}></div>
+    <dl class="menu">
+    {% for blok in bloky %}
+        <dd class="menu-button"> <a class="button" href="/matematikuj/{{blok.odkaz}}/">{{blok.nazev}}</a></dd>
+    {% endfor %}
+    </dl>
+
+

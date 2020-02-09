@@ -1,0 +1,6 @@
+#start serveru
+py -m django startproject mysite
+
+#py manage.py startapp moviebook
+
+python3 manage.py runserver
