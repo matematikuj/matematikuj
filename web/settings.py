@@ -25,7 +25,7 @@ SECRET_KEY = 'cm+^($@#u@n$0)f%l3%q^+3l%j^+2uoj_^)3hxzsihr0e8qk##'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['matematikuj.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -120,7 +120,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+STATIC_ROOT =  os.path.join(BASE_DIR, "static/")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    ("global_static", '/home/adnimistrator/Dropbox/web/global_static'), #složka pro společné staticfiles přidám do reference {% static 'common_static/base_style.css' %}
+    ("global_static", os.path.join(BASE_DIR,'global_static/')), #složka pro společné staticfiles přidám do reference {% static 'common_static/base_style.css' %}
 ]

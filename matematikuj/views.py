@@ -7,6 +7,9 @@ Rocnik = ["6.ročník","7.ročník","8.ročník","9.ročník"]
 def index(request):
     return render(request,"matematikuj/index.html", dict(bloky = Menu_bloky.objects.all(), homepage = True))
 
+def studnice(request):
+    return render(request,"matematikuj/index.html", dict(bloky = Menu_bloky.objects.all(), studnice = True))
+
 def temata(request):
     temataSS = []
     temataZS = []
