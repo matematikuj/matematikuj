@@ -6,6 +6,9 @@ nav {
         display: inline-grid;
         text-align: center;
     }
+    div.mensi {
+        font-size: 9pt;
+    }
     
     a.cell,a.cell:hover {
         text-align: center;
@@ -23,8 +26,6 @@ nav {
         text-decoration: none;
         background-color: #000080;;
         color: white;
-        background-image: url(images/background.png);
-        font-weight: bold;
         font-size: 12pt;
         border-radius: 0.5em;
     }

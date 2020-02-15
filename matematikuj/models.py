@@ -18,8 +18,7 @@ class Tema(models.Model):
     tema = models.CharField(max_length=30)
     podtema = models.CharField(max_length=50, blank=True)
     kapitola = models.CharField(max_length=50, blank=True)
-    padding_left = 0
-    padding_right = 0 #pomoc do view na počítaní velikosti okna
+    pocet_prikladu = 0
 
     def __str__(self):
         if self.kapitola == '':
@@ -32,7 +31,7 @@ class Tema(models.Model):
     class Meta:
         verbose_name = 'Téma'
         verbose_name_plural = 'Témata'
-        ordering = ["tema","podtema","kapitola"]
+        ordering = ["tema","podtema"]
 
 '''
 class Tema_ZS(models.Model):

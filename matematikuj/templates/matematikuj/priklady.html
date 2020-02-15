@@ -21,7 +21,7 @@
             {% else %}
             <div id="{{priklad.ukaz_reseni}}">
             <div class="zadani">
-            <p> <strong> Příklad: {{priklad.ident}} </strong>Zadání: {{ priklad.zadani }} 
+            <p> <strong> Příklad: {{priklad.ident}} </strong> {{ priklad.zadani }} 
             <form action='.' method='POST'>
                     {% csrf_token %}
             <input class="reseni_button" type="submit" name="{{priklad.ident}}" value="Řešení">
